@@ -11,20 +11,6 @@ const part1Controller = {
         res.status(500).send('Something went wrong')
        }
     },
-   
-    sendMessage: async (req, res) => {
-        try {
-            console.log(req)
-            const {message} = req.query;
-            const {history} = req.body;
-            const response = await helpers.sendMessage(message, history ?? []);
-            console.log(response);
-            res.status(200).json({message: response});
-        } catch (e) {
-            console.log(e)
-            res.status(500).send('Something went wrong')
-        }
-    }
 }
 
 module.exports = part1Controller;

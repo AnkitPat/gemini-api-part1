@@ -1,11 +1,12 @@
 const express = require('express');
-const router = require('./routes/part1.routes');
+const router = require('./routes/part2.routes');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
 app.use(cors())
 app.use(bodyParser.json())
 
+// app.use('/', router)
 app.use('/', router)
 
 app.listen(3001, () => {
