@@ -26,7 +26,8 @@ const ConversationList = () => {
                     id: lastItemId+1,
                     type: 'add-new-chat'
                 })
-                navigate(`/chat/${lastItemId+1}`)
+                navigate(`/chat-stream/${lastItemId+1}`)
+                // navigate(`/chat/${lastItemId+1}`)
             }}>
                 <EditIcon />
             </Fab>

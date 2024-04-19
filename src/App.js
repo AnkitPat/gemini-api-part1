@@ -4,6 +4,7 @@ import Base from "./containers/Base";
 import ConversationList from "./containers/ConversationList";
 import { ContextWrapper } from "./components/context";
 import SingleConversation from "./containers/SingleConversation";
+import SingleConversationStream from "./containers/SingleConversationStream";
 
 const App = () => {
   const paths = createBrowserRouter([
@@ -21,6 +22,9 @@ const App = () => {
     }, {
       path: '/chat/:id',
       Component: SingleConversation
+    }, {
+      path: '/chat-stream/:id',
+      Component: SingleConversationStream
     }
   ])
 

@@ -1,5 +1,5 @@
 const { GoogleGenerativeAI } = require('@google/generative-ai')
-const api = new GoogleGenerativeAI('***')
+const api = new GoogleGenerativeAI('AIzaSyA8ASC9PWCjwAQCvKBrMW0A3hZUyeXVLkc')
     const model = api.getGenerativeModel({ model: 'gemini-pro' })
 const helpers = {
   generateContentFn: async text => {

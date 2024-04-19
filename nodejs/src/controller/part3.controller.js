@@ -1,6 +1,6 @@
-const helpers = require("../helpers/part2");
+const helpers = require("../helpers/part3");
 
-const part2Controller = {
+const part3Controller = {
     generateContent: async (req, res) => {
        try {
         const {text} = req.query;
@@ -17,7 +17,19 @@ const part2Controller = {
             const {message} = req.query;
             const {history} = req.body;
             const response = await helpers.sendMessage(message, history ?? []);
+            console.log(response);
             res.status(200).json({message: response});
+        } catch (e) {
+            console.log(e)
+            res.status(500).send('Something went wrong')
+        }
+    },
+    sendMessageStream: async (req, res) => {
+        try {
+            const {message} = req.query;
+            const {history} = req.body;
+            helpers.sendMessageStream(message, history ?? [], res);
+            
         } catch (e) {
             console.log(e)
             res.status(500).send('Something went wrong')
@@ -25,4 +37,4 @@ const part2Controller = {
     }
 }
 
-module.exports = part2Controller;
+module.exports = part3Controller;
