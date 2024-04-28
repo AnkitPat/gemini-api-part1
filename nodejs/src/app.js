@@ -1,9 +1,10 @@
 const express = require('express')
-const router = require('./routes/part3.routes')
+const router = require('./routes/part4.routes')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const app = express()
 app.use(cors())
+require('dotenv').config();
 app.use(bodyParser.json())
 
 app.use('/', router)

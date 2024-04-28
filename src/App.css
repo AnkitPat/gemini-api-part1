@@ -85,6 +85,28 @@
       flex: 0.9
     }
   }
+
+  .image-container {
+    width: 100px;
+    background-color: lightgray;
+    padding: 5px;
+    border-radius: 5px;
+    display: inline !important;
+    flex: 0 !important;
+    position: absolute;
+    bottom: 50px;
+    >img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .cancel {
+      position: absolute;
+      right: -20px;
+      top: -20px;
+    }
+    
+  }
 }
 
 .conversation-list {
@@ -113,7 +135,7 @@
 
   }
 
-  > input {
+  > input, .single-with-image-input {
     /* width: 100%; */
     width: auto;
     min-width: 200px;

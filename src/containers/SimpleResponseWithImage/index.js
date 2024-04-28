@@ -8,7 +8,7 @@ function SimpleResponseWithImage () {
   const [response, setResponse] = useState({})
   const [enteredText, setEnteredText] = useState('')
   const [selectedImage, setSelectedImage] = useState('')
-  const [imageUploading, setImageUploading] = useState(false);
+  const [iamgeUploading, setImageUploading] = useState(false);
   const [selectedImageUrl, setSelectedImageUrl] = useState('')
   const inputFile = useRef(null)
 
@@ -82,8 +82,8 @@ function SimpleResponseWithImage () {
   }, [selectedImageUrl])
 
   const loader = useMemo(() => {
-    return imageUploading && <Backdrop open><CircularProgress/></Backdrop>
-  }, [imageUploading]);
+    return iamgeUploading && <Backdrop open><CircularProgress/></Backdrop>
+  }, [iamgeUploading]);
 
   return (
     <div className='App'>

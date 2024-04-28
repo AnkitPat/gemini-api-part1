@@ -5,6 +5,7 @@ import ConversationList from "./containers/ConversationList";
 import { ContextWrapper } from "./components/context";
 import SingleConversation from "./containers/SingleConversation";
 import SingleConversationStream from "./containers/SingleConversationStream";
+import SimpleResponseWithImage from "./containers/SimpleResponseWithImage";
 
 const App = () => {
   const paths = createBrowserRouter([
@@ -15,6 +16,10 @@ const App = () => {
     {
       path: '/simple',
       Component: SimpleResponse
+    },
+    {
+      path: '/simpleWithImage',
+      Component: SimpleResponseWithImage
     },
     {
       path: '/conversationList',
